@@ -1,0 +1,102 @@
+
+#cercle {
+	position: relative;
+	width: 8em;
+	height: 8em;
+	border-radius: 50%;
+	transform: translate(250%, 250%);
+
+
+	background-color: #BC002D;
+}
+
+#horloge{
+	position: relative;
+	width: 19.4em;
+	height: 20em;;
+	background-image: url('img/clock.svg');
+	transform: translate(-30%, -30%);
+
+}
+
+#pointCentral{
+	background-color: black;
+	width: 5%;
+	height: 5%;
+	border-radius: 100%;
+	transform: translate(930%, 930%);
+}
+
+#bloc-heures, #bloc-minutes, #bloc-secondes {
+	
+	position: absolute;
+
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#heures{
+	position: absolute;
+
+	width: 2%;
+	height: 25%;
+	
+	top: 26%;
+	left: 48%;
+
+	transform-origin: 50% 90%;
+	background-color: #000;
+
+}
+
+#minutes{
+	position: absolute;
+
+	width: 2%;
+	height: 35%;
+	
+	top: 15%;
+	left: 50%;
+
+	transform-origin: 50% 100%;
+
+	background-color: #000;
+
+}
+
+#secondes{
+	position: absolute;
+
+	width: 1%;
+	height: 45%;
+	
+	top: 5%;
+	left: 50%;
+
+	transform-origin: 50% 100%;
+
+	background-color: black;
+
+}
+
+
+
+@keyframes tictac {
+  	100% { 
+  		transform: rotateZ(360deg);
+  	}
+}
+
+#bloc-secondes {
+	animation: tictac 60s infinite steps(60);
+}
+
+#bloc-minutes {
+	animation: tictac 3600s infinite linear;
+}
+
+#bloc-heures {
+	animation: tictac 43200s infinite linear;
+}
